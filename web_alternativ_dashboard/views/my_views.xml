@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+
+    <record id="view_form_checkout" model="ir.ui.view">
+        <field name="model">af.dashb</field>
+          <field name="arch" type="xml">
+            <form>
+                <xpath expr="//form" position="inside">
+
+
+
+
+                    <div class="container">
+                        <!-- Top Jumbatron -->
+                        <div class="jumbotron mb-4">
+                          <h1 class="display-4">Hello, world!</h1>
+                          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                          <hr class="my-4" />
+                          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                        </div>
+
+                        <!-- Cards -->
+                        <div class="row mt-4">
+                            <div class="col col-md-4">
+                                <div class="card">
+                                  <img src="https://images.pexels.com/photos/4100639/pexels-photo-4100639.jpeg" class="card-img-top" alt="..." />
+                                  <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="col col-md-4">
+                                <div class="card">
+                                  <img src="https://images.pexels.com/photos/852793/pexels-photo-852793.jpeg" class="card-img-top" alt="..." />
+                                  <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="col col-md-4">
+                                <div class="card">
+                                  <img src="https://images.pexels.com/photos/4098366/pexels-photo-4098366.jpeg" class="card-img-top" alt="..." />
+                                  <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </xpath>
+            </form>
+          </field>
+    </record>
+
+
+    <act_window id="action_main_menu_item_window"
+                target="inline"
+                name="Min Dashboard"
+                res_model="af.dashb"
+                view_mode="form"/>
+
+    <menuitem name="Dashboard" id="main_menu_item_dashb" action="action_main_menu_item_window" sequence="0"/>
+
+
+    <!-- JS Action Menu -->
+    <record id="action_js_widget_window" model="ir.actions.client">
+      <field name="name">Dashboard Demo</field>
+      <field name="tag">js_widget_dashb.action</field>
+    </record>
+    <menuitem name="JS Dashboard Action" id="js_widget_sub_menu" action="action_js_widget_window" parent="main_menu_item_dashb"/>
+
+
+</odoo>

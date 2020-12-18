@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Theses scriprs are not being loaded in the dafa project, something blocking it -->
+    <template id="assets_backend" name="board assets" inherit_id="web.assets_backend">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/web_alternative_dashboard/static/src/scss/dashb.scss"/>
+            <script type="text/javascript" src="/web_alternative_dashboard/static/src/js/dashb.js"></script>
+        </xpath>
+    </template>
+
+
+
+</odoo>
